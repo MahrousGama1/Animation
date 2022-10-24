@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("../images/pexels-arina-dmitrieva-14093478.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home{
+    position: relative;
+    height: 100vh;
+}
+.home::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color:black;
+    opacity: .7;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7,
+.div8 {
+    width: 150px;
+    height: 85px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 5px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    z-index: 10;
+    background-image: url("../images/mg.png");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-direction: alternate;
+
+}
+
+.div1,
+.div3,
+.div5,
+.div7 {
+    
+    animation-name: change-red;
+}
+
+.div2,
+.div4,
+.div6,
+.div8 {
+
+    animation-name: change-blue;
+    left: calc(100% - 150px)
+}
+
+.div1 {
+    animation-delay: 1s;
+}
+
+.div2 {
+    animation-delay: 4s;
+}
+
+.div3 {
+    animation-delay: 7s;
+}
+
+.div4 {
+    animation-delay: 10s;
+}
+
+.div5 {
+    animation-delay: 13s;
+}
+
+.div6 {
+    animation-delay: 16s;
+}
+
+.div7 {
+    animation-delay: 19s;
+}
+
+.div8 {
+    animation-delay: 22s;
+}
+
+
+@keyframes change-red {
+
+    0% {
+        left: 0px;
+
+    }
+
+
+    100% {
+
+        left: calc(100% - 150px);
+        -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0);
+        box-shadow: 0 0 5px #f3de21, 0 0 20px #f39121, 0 0 40px #f73e0f;
+
+    
+    }
+}
+
+@keyframes change-blue {
+
+    0% {
+        left: calc(100% - 150px);
+    }
+
+    100% {
+        left: 0px;
+        -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0);
+        box-shadow: 0 0 5px #f3de21, 0 0 20px #f39121, 0 0 40px #f73e0f;
+    
+    }
+}
+
